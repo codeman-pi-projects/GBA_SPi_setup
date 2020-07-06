@@ -1,11 +1,11 @@
 [Unit]
-Description=MintyPi Service
+Description=GBA_SPi Service
 
 [Service]
 Type=simple
 Restart=always
 User=root
-ExecStart=/home/pi/mintyPi/minty-startup.sh
+ExecStart=/home/pi/GBA_SPi_setup/GBA_SPi/GBA_SPi-startup.sh
 
 [Install]
 WantedBy=multi-user.target
