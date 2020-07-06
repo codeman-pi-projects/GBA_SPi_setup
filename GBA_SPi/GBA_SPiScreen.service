@@ -1,11 +1,11 @@
 [Unit]
-Description=mintyPi Screen Service
+Description=GBA_SPi Screen Service
 
 [Service]
 Type=simple
 Restart=always
 User=root
-ExecStart=/usr/bin/mintyPiScreen
+ExecStart=/home/pi/fbcp-ili9341/build/fbcp-ili9341
 
 [Install]
 WantedBy=multi-user.target
