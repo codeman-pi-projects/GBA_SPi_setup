@@ -41,7 +41,7 @@ read -p "Press enter to continue"
 #read -p "Press enter to continue"
 
 echo "Setting up GBA_SPi startup script..."
-chmod +x /home/pi/GBA_SPi/GBA_SPi-startup.sh
+chmod +x /home/pi/GBA_SPi_setup/GBA_SPi/GBA_SPiStartup.sh
 sudo cp /home/pi/GBA_SPi_setup/GBA_SPi/GBA_SPiStartup.service /etc/systemd/system/GBA_SPiStartup.service
 sudo chmod 777 /etc/systemd/system/GBA_SPiStartup.service
 sudo systemctl enable GBA_SPiStartup
