@@ -5,7 +5,7 @@ Description=GBA_SPi Service
 Type=simple
 Restart=always
 User=root
-ExecStart=/home/pi/GBA_SPi_setup/GBA_SPi/GBA_SPi-startup.sh
+ExecStart=/home/pi/GBA_SPi_setup/GBA_SPi/GBA_SPiStartup.sh
 
 [Install]
 WantedBy=multi-user.target
