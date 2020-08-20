@@ -120,6 +120,11 @@ sudo pip install Adafruit_ADS1x15
 echo "Done!"
 read -p "Press enter to continue"
 
+echo "Installing I2C tools"
+sudo apt-get install -y i2c-tools
+sudo apt-get install python-smbus
+echo "Done!"
+
 one_for_all_rules=10-OneForAll.rules
 echo "Copying retrogame udev config..."
 cp /boot/mintyPi/$one_for_all_rules /etc/udev/rules.d/$one_for_all_rules
