@@ -101,16 +101,6 @@ echo 'raspberry' | sudo -u pi git config --global user.ghemail "mintyPi@sudomod.
 echo "Done!"
 read -p "Press enter to continue"
 
-echo "Setting up mintyPi update script"
-minty_update=minty-update.sh
-minty_logo=minty-logo.png
-cd /home/pi
-echo 'raspberry' | sudo -u pi git clone -b mintyPiv3 https://github.com/wermy/mintyPi.git
-cp /boot/mintyPi/$minty_update /home/pi/RetroPie/retropiemenu/$minty_update
-cp /boot/mintyPi/$minty_logo /home/pi/RetroPie/retropiemenu/icons/$minty_logo
-echo "Done!"
-read -p "Press enter to continue"
-
 echo "Setting up Bluup's scripts..."
 sudo apt update
 sudo apt install -y python-pip --fix-missing
@@ -134,26 +124,6 @@ cd OneForAll/
 make
 sudo chmod 777 ./osd/osd
 cd ..
-echo "Done!"
-read -p "Press enter to continue"
-
-echo "Downloading custom themes..."
-mkdir /home/pi/.emulationstation/themes
-cd /home/pi
-echo 'raspberry' | sudo -u pi git clone https://github.com/wermy/es-theme-material.git
-echo 'raspberry' | sudo -u pi git clone https://github.com/wstevens0n/tft-mintypi.git
-echo 'raspberry' | sudo -u pi git clone https://github.com/wermy/es-theme-carbon.git
-mv es-theme-material /home/pi/.emulationstation/themes/
-mv tft-mintypi /home/pi/.emulationstation/themes/
-mv es-theme-carbon /home/pi/.emulationstation/themes/
-echo "Done!"
-read -p "Press enter to continue"
-
-echo "Setting up mintypi hostname..."
-sudo sed -i -e 's/^retropie/mintypi/g' /etc/hostname
-sudo sed -i -e 's/retropie/mintypi/g' /etc/hosts
-sudo rm /etc/ssh/ssh_host_* 
-sudo dpkg-reconfigure openssh-server
 echo "Done!"
 read -p "Press enter to continue"
 
